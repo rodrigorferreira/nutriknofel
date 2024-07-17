@@ -1,0 +1,17 @@
+<!-- post-detail.component.html -->
+
+<div class="container">
+  <div *ngIf="post" class="row">
+    <div class="col-lg-8 offset-lg-2">
+
+      <h2 class="text-center mt-4 mb-4 font-weight-bold">{{ post.title }}</h2>
+      <img [src]="post.image" alt="{{ post.title }}" class="img-fluid mb-4 d-block mx-auto">
+
+      <!-- Utilizando o pipe para formatar o conteúdo -->
+      <div class="content-container" [innerHTML]="post.content | formatParagraphs"></div>
+      <button class="btn btn-secondary mt-3" (click)="goBack()">Voltar</button>
+    </div>
+  </div>
+</div>
+
+

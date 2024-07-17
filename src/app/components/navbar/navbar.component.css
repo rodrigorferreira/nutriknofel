@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #558B2F; /* Verde mais escuro */
+}
+
+.navbar-brand, .nav-link {
+  color: rgb(21, 20, 20) !important;
+  font-size: 1.2rem; /* Tamanho de fonte maior */
+}
+
+.nav-link {
+  margin-right: 1rem;
+  padding: 0.5rem; /* Mais padding */
+}
+
+.nav-link:hover, .nav-link:focus {
+  background-color: #81C784; /* Cor de fundo ao passar o mouse ou focar */
+}
+
+.nav-link i {
+  margin-right: 0.5rem;
+}
+
+.navbar-toggler {
+  border-color: rgb(232, 226, 226);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

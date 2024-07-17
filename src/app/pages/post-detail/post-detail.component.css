@@ -1,0 +1,17 @@
+/* post-detail.component.css */
+
+.post-content {
+  line-height: 1.6;
+}
+
+.post-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.post-content h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1.2rem;
+}
