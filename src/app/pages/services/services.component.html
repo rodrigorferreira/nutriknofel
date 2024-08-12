@@ -1,36 +1,120 @@
-<div class="container">
+<div class="container services-container">
   <h1 class="text-center mt-5 mb-5 font-weight-bold">Nossos Serviços</h1>
   <div class="row">
-    <div class="col-md-6 col-lg-3">
-      <div class="card service-card">
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold text-center">Consultas Nutricionais Personalizadas</h5>
-          <p class="card-text">Oferecemos consultas individuais para avaliação do estado nutricional, elaboração de planos alimentares personalizados e acompanhamento contínuo.</p>
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="service-card" data-toggle="modal" data-target="#modalConsultas">
+        <div class="card-icon">
+          <i class="fas fa-user-md"></i>
         </div>
+        <h5 class="service-title">Consultas Nutricionais Personalizadas</h5>
+        <p class="service-text">Avaliação nutricional, planos alimentares personalizados e acompanhamento contínuo.</p>
       </div>
     </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="card service-card">
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold text-center">Planos Alimentares Específicos</h5>
-          <p class="card-text">Desenvolvemos planos alimentares adaptados às necessidades individuais de cada cliente, levando em consideração metas, preferências e restrições alimentares.</p>
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="service-card" data-toggle="modal" data-target="#modalPlanos">
+        <div class="card-icon">
+          <i class="fas fa-apple-alt"></i>
         </div>
+        <h5 class="service-title">Planos Alimentares Específicos</h5>
+        <p class="service-text">Planos alimentares adaptados às necessidades individuais, metas e preferências.</p>
       </div>
     </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="card service-card">
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold text-center">Orientação Nutricional para Grupos</h5>
-          <p class="card-text">Realizamos palestras e workshops sobre nutrição para empresas, escolas e grupos com o objetivo de promover hábitos alimentares saudáveis.</p>
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="service-card" data-toggle="modal" data-target="#modalGrupos">
+        <div class="card-icon">
+          <i class="fas fa-users"></i>
         </div>
+        <h5 class="service-title">Orientação Nutricional para Grupos</h5>
+        <p class="service-text">Palestras e workshops sobre nutrição para empresas, escolas e grupos.</p>
       </div>
     </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="card service-card">
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold text-center">Acompanhamento em Programas de Emagrecimento</h5>
-          <p class="card-text">Assistimos indivíduos em programas de perda de peso, fornecendo suporte nutricional e ajustando estratégias conforme necessário para alcançar metas de forma saudável.</p>
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="service-card" data-toggle="modal" data-target="#modalEmagrecimento">
+        <div class="card-icon">
+          <i class="fas fa-weight"></i>
         </div>
+        <h5 class="service-title">Acompanhamento em Programas de Emagrecimento</h5>
+        <p class="service-text">Suporte nutricional contínuo em programas de perda de peso saudável.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Consultas Nutricionais Personalizadas -->
+<div class="modal fade" id="modalConsultas" tabindex="-1" role="dialog" aria-labelledby="modalConsultasLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalConsultasLabel">Consultas Nutricionais Personalizadas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Nossas consultas nutricionais são focadas em atender às necessidades individuais de cada cliente. Realizamos uma avaliação detalhada do estado nutricional, considerando históricos médicos, hábitos alimentares, estilo de vida e objetivos pessoais. A partir dessa análise, elaboramos planos alimentares personalizados e oferecemos acompanhamento contínuo para garantir o progresso e adaptação às novas rotinas.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Planos Alimentares Específicos -->
+<div class="modal fade" id="modalPlanos" tabindex="-1" role="dialog" aria-labelledby="modalPlanosLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPlanosLabel">Planos Alimentares Específicos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Desenvolvemos planos alimentares específicos para cada cliente, levando em consideração as metas pessoais, preferências alimentares e possíveis restrições. Nosso foco é criar um plano que seja sustentável e que se adapte ao estilo de vida de cada pessoa, promovendo saúde e bem-estar a longo prazo.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Orientação Nutricional para Grupos -->
+<div class="modal fade" id="modalGrupos" tabindex="-1" role="dialog" aria-labelledby="modalGruposLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalGruposLabel">Orientação Nutricional para Grupos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Nossa orientação nutricional para grupos é ideal para empresas, escolas e outras instituições que desejam promover hábitos alimentares saudáveis entre seus membros. Oferecemos palestras, workshops e treinamentos práticos, todos focados em educação nutricional e na melhoria do bem-estar coletivo.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Acompanhamento em Programas de Emagrecimento -->
+<div class="modal fade" id="modalEmagrecimento" tabindex="-1" role="dialog" aria-labelledby="modalEmagrecimentoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEmagrecimentoLabel">Acompanhamento em Programas de Emagrecimento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Nosso acompanhamento em programas de emagrecimento é feito de forma individualizada, ajustando estratégias conforme necessário para garantir que os clientes alcancem suas metas de forma saudável e sustentável. Oferecemos suporte contínuo e monitoramento para ajudar na adesão ao plano e na superação de desafios ao longo do processo.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>

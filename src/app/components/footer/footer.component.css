@@ -1,12 +1,43 @@
+/* Estilização do Footer */
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background-color: #f5f5f5;
+  background-color: #2c3e50; /* Cor mais escura para contraste */
+  color: #ecf0f1; /* Texto claro para melhor leitura */
+  padding: 20px 0;
+  margin-top: auto; /* Garante que o rodapé fique no final da página */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacá-lo do conteúdo */
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer .text-muted {
-  padding: 10px;
+  color: #bdc3c7; /* Texto menos acentuado */
+  font-size: 14px;
+}
+
+.footer .social-icons a {
+  color: #ecf0f1; /* Ícone de cor clara */
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #1abc9c; /* Cor de destaque ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .text-muted {
+    margin-bottom: 10px;
+  }
 }

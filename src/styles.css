@@ -2,3 +2,90 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Estilização Geral */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilização do Logo */
+.logo-container {
+  margin-bottom: 40px;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+/* Estilização dos Títulos e Textos */
+h1, h2 {
+  color: #2c3e50;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Cartões de Conteúdo */
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #2980b9;
+}
+
+.btn-outline-primary {
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Seção de Call to Action */
+.call-to-action {
+  background-color: #27ae60;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1eb747;
+}

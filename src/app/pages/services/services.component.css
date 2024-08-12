@@ -1,26 +1,77 @@
+/* Configurações Gerais */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Cor de fundo suave */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+/* Estilização dos Cards de Serviço */
 .service-card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-  background-color: #f8f9fa; /* Light gray background color */
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Garante que todos os cards tenham a mesma altura */
+  position: relative;
 }
 
 .service-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-.service-card .card-body {
-  padding: 2em;
+.service-card .card-icon {
+  font-size: 2.5rem;
+  color: #1abc9c; /* Cor de destaque para o ícone */
+  margin-bottom: 20px;
 }
 
-.service-card .card-title {
-  margin-bottom: 1.5em;
-  color: #007BFF;
-  font-size: 1.25em; /* Increase font size */
+.service-card .service-title {
+  color: #34495e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.service-card .card-text {
-  color: #6c757d;
-  font-size: 1.1em; /* Increase font size */
+.service-card .service-text {
+  color: #7f8c8d;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1; /* Faz com que o texto ocupe o espaço disponível */
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 20px 15px;
+  }
+
+  .service-card .card-icon {
+    font-size: 2rem;
+  }
+
+  .service-card .service-title {
+    font-size: 1.3rem;
+  }
+
+  .service-card .service-text {
+    font-size: 0.9rem;
+  }
 }
