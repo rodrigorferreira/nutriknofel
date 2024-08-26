@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 
@@ -17,6 +18,9 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { FormatParagraphsPipe } from './pipes/format-paragraphs.pipe';
+import { LoginComponent } from './blogadmin/login/login.component';
+import { PostsComponent } from './blogadmin/posts/posts.component';
+import { PostFormComponent } from './blogadmin/post-form/post-form.component';
 
 
 @NgModule({
@@ -29,13 +33,17 @@ import { FormatParagraphsPipe } from './pipes/format-paragraphs.pipe';
     ServicesComponent,
     BlogComponent,
     PostDetailComponent,
-    FormatParagraphsPipe
+    FormatParagraphsPipe,
+    LoginComponent,
+    PostsComponent,
+    PostFormComponent
   ],
   imports: [
     HttpClientModule,
     NgbModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     FontAwesomeModule
   ],

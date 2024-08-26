@@ -1,0 +1,39 @@
+<!-- posts.component.html -->
+
+<div class="container mt-5">
+  <h2>Gerenciar Posts</h2>
+
+  <button class="btn btn-primary mb-3" (click)="createPost()">Novo Post</button>
+
+  <div *ngIf="isLoading" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Carregando...</span>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!isLoading && posts.length === 0" class="alert alert-info">
+    Nenhum post encontrado.
+  </div>
+
+  <table class="table table-striped" *ngIf="posts.length > 0">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.title }}</td>
+        <td>{{ post.author }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2" (click)="editPost(post.id)">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="deletePost(post.id)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

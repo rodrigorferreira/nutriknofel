@@ -1,7 +1,6 @@
-// blog.component.ts
-
 import { Component, OnInit } from '@angular/core';
-import { BlogService, BlogPost } from '../../blog.service';
+import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-blog',
@@ -9,18 +8,25 @@ import { BlogService, BlogPost } from '../../blog.service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  posts: BlogPost[] = [];
+  posts: any[] = [];
+  errorMessage = '';
 
-  constructor(private blogService: BlogService) { }
+  constructor(private http: HttpClient, private authService: AuthService) {}
 
-  ngOnInit(): void {
-    this.blogService.getPosts().subscribe(
-      (data: BlogPost[]) => {
-        this.posts = data;
-      },
-      (error) => {
-        console.error('Erro ao carregar posts:', error);
-      }
-    );
+  ngOnInit() {
+    this.getPosts();
+  }
+
+  getPosts() {
+    this.http.get(`${this.authService.getApiUrl()}posts/`)
+      .subscribe(
+        (data: any) => {
+          this.posts = data;
+        },
+        error => {
+          this.errorMessage = 'Erro ao carregar posts';
+          console.error('Erro ao carregar posts:', error);
+        }
+      );
   }
 }

@@ -1,0 +1,23 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="title">Título</label>
+    <input type="text" id="title" formControlName="title" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="summary">Resumo</label>
+    <textarea id="summary" formControlName="summary" class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="content">Conteúdo</label>
+    <textarea id="content" formControlName="content" class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="image">Imagem</label>
+    <input type="file" id="image" (change)="onFileChange($event)" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+<div *ngIf="errorMessage" class="alert alert-danger mt-3">
+  {{ errorMessage }}
+</div>

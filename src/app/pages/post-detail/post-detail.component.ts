@@ -18,18 +18,18 @@ export class PostDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const postId = params.get('id'); // postId pode ser string | null
+      const postId = params.get('id');
 
       if (postId !== null && !isNaN(+postId)) {
-        this.loadPost(+postId); // Convertendo postId para number e passando para loadPost
+        this.loadPost(+postId);
       } else {
         console.error('ID do post inválido ou não encontrado na rota');
-        // Trate de acordo com a lógica do seu aplicativo, por exemplo, redirecionando ou mostrando uma mensagem de erro.
+        // Redirecionar ou mostrar uma mensagem de erro conforme a lógica do seu aplicativo
       }
     });
   }
 
-  private loadPost(postId: number): void {
+  loadPost(postId: number): void {  // Certifique-se de que o método 'loadPost' está definido
     this.blogService.getPost(postId).subscribe({
       next: (post) => {
         this.post = post;
@@ -41,6 +41,6 @@ export class PostDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/']); // Navega de volta para a página inicial ou a página anterior conforme configurado nas rotas
+    this.router.navigate(['/blog']);  // Navega de volta para a página do blog
   }
 }
